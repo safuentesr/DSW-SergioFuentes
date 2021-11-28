@@ -1,0 +1,89 @@
+*{
+    margin: 5px;
+    border-radius: 3px;
+}
+header{
+    background-color: rgb(55, 98, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+aside{
+    grid-column: 1/2;
+    background-color: rgb(76, 184, 247);
+}
+section{
+    grid-column: 2/5;
+    background-color: rgb(223, 231, 231);
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(55, 98, 238);
+    color: white;
+    padding: 10px;
+}
+.justificado{
+    text-align: justify;
+}
+.centrado{
+    text-align: center;
+}
+
+/*  sección de estilos para el menú*/
+
+.menu {
+    display: flex;
+}
+nav ul {
+    list-style: none;
+    /* padding: 2px; */
+    color: rgb(8, 1, 1);
+    background: rgb(55, 98, 238);
+}
+.menu li {
+    width: 100%;
+    text-align: center;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(7, 2, 2);
+    background:rgb(170, 221, 245);
+    /* height: 25px; */
+    text-decoration: none;
+}
+
+.dropdown li {
+    display: none;
+}
+.menu li:hover .dropdown li {
+    display: block;
+}
+.menu a:hover {
+    background:rgb(43, 226, 211);
+    color: #fff;
+
+}
+
+
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header{
+        flex-direction: column;/* coloca los elementos verticales. */
+        align-items: center;
+        
+    }
+}
